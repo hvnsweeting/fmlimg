@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<p class="lead">
+Select file
+</p>
+<form action="" method=post enctype=multipart/form-data>
+    <input name="file" id="file" type="file" multiple=true class="file-loading">
+    <script>
+$(document).on('ready', function() {
+    $("#input-5").fileinput({
+        showUpload: false,
+        maxFileCount: 10,
+        mainClass: "input-group-lg"
+    });
+});
+    </script>
+    <input type=submit value=Upload class="btn btn-lg btn-default">
+</form>
+{% endblock %}

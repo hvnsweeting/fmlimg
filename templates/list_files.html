@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block body %}
+<p class="lead">
+Uploaded {{ files|count }} files:
+</p>
+{% for fn in files %}
+{{ fn }}<br/>
+{%- endfor %}
+{% endblock %}
